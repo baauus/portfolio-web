@@ -37,27 +37,26 @@ const SITE = PROFILE.site
     <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-2" title="My time">
       <TimeZoneCard timezone={PROFILE.timezone} />
     </Card>
-    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Experiences">
-      <ExperienceCard/>
+    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-1" title="Technologies">
+      <AboutMe/>
     </Card>
     <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Education">
       <EducationCard/>
     </Card>
-    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-1" title="Technologies">
-      <AboutMe/>
+    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Experience">
+      <ExperienceCard/>
     </Card>
     <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-1 lg:row-span-1"
           title="Certificates">
       <StudyCard/>
     </Card>
-    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-3 lg:row-span-2" title="Projects">
+    <Card colSpan="md:col-span-3 lg:col-span-6 " rowSpan="md:row-span-3 lg:row-span-2" title="Projects">
       <Projects/>
     </Card>
-    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Contact">
+    <Card colSpan="md:col-span-3 lg:col-span-6" rowSpan="md:row-span-2 lg:row-span-2" title="Contact">
       <div class="flex h-full w-full items-center justify-center text-center text-sm">
         <i>
-          Please feel free to reach out to me through <a href={PROFILE.links.twitter} class="underline hover:font-bold">Twitter
-          message</a> or <a href={PROFILE.repo+'/issues'} class="underline hover:font-bold">Github issue</a>.
+          Please feel free to reach out to me through  or <a href={PROFILE.repo+'/issues'} class="underline hover:font-bold">Github issue</a>.
         </i>
       </div>
     </Card>

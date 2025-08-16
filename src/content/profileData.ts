@@ -41,17 +41,9 @@ export const PROFILE = {
   ],
   links: {
     github: "https://github.com/baauus",
-    medium: "https://medium.com/@TechTim42",
-    twitter: "https://twitter.com/TechTim42",
-    bluesky: "https://bsky.app/profile/techtim.bsky.social",
-    thread: "https://www.threads.net/@techtim2024",
-    mastodon: "https://mastodon.social/@techtim42",
-    youtube: "https://www.youtube.com/@techtim42",
-    stackoverflow: "https://stackoverflow.com/users/5249708/tim",
-    devto: "https://dev.to/timhub",
-    goodreads: "",
+    linkedin: "https://www.linkedin.com/in/ricardbausili/",
   },
-  studies: [
+  certificates: [
     // studies, qualifications and certifications
     {
       title: "Bachelor of Science in Computer Science",
