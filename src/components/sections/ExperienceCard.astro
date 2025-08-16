@@ -12,13 +12,13 @@ experiences.sort((a: any, b: any) => {
   return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
 });
 
-experiences = experiences.slice(0, 3);
+experiences = experiences.slice(0, 4);
 ---
 
 
 <div class="mt-2 space-y-4">
   {
-    experiences.slice(0, 3).map((exp) => (
+    experiences.slice(0, 4).map((exp) => (
       <div>
         <h4 class="text-md font-medium">{exp.data.title}</h4>
         <a class="text-sm text-primary hover:underline" href={('/experiences/' + (exp?.slug ?? ''))}>
@@ -35,4 +35,6 @@ experiences = experiences.slice(0, 3);
     <Button variant="link" className="pl-0"> View More</Button>
   </a>
 </div>
+
+
 

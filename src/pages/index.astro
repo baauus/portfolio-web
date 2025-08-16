@@ -1,15 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import IntroCard from '../components/sections/IntroCard.astro'
-import AboutMe from '../components/sections/AboutMe.astro'
+import AboutMeCard from '../components/sections/AboutMeCard.astro'
+import TechnologiesCard from '../components/sections/TechnologiesCard.astro'
 import Card from '../components/Card.astro'
 import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
-import Projects from '../components/sections/Projects.astro'
-import StudyCard from '../components/sections/StudyCard.astro'
+import ProjectsCard from '../components/sections/ProjectsCard.astro'
+import CertificatesCard from '../components/sections/CertificatesCard.astro'
 import EducationCard from '../components/sections/EducationCard.astro'
 import { PROFILE } from "../content/profileData";
-import BlogCard from '../components/sections/BlogCard.astro'
 const SITE = PROFILE.site
 ---
 
@@ -29,7 +28,7 @@ const SITE = PROFILE.site
     class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-12 lg:gap-4"
   >
     <Card colSpan="lg:col-span-9 md:col-span-2" rowSpan="md:row-span-1 lg:row-span-4">
-      <IntroCard/>
+      <AboutMeCard/>
     </Card>
     <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-2" title="Your time">
       <TimeZoneCard/>
@@ -38,7 +37,7 @@ const SITE = PROFILE.site
       <TimeZoneCard timezone={PROFILE.timezone} />
     </Card>
     <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-1" title="Technologies">
-      <AboutMe/>
+      <TechnologiesCard/>
     </Card>
     <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Education">
       <EducationCard/>
@@ -48,10 +47,10 @@ const SITE = PROFILE.site
     </Card>
     <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-1 lg:row-span-1"
           title="Certificates">
-      <StudyCard/>
+      <CertificatesCard/>
     </Card>
     <Card colSpan="md:col-span-3 lg:col-span-6 " rowSpan="md:row-span-3 lg:row-span-2" title="Projects">
-      <Projects/>
+      <ProjectsCard/>
     </Card>
     <Card colSpan="md:col-span-3 lg:col-span-6" rowSpan="md:row-span-2 lg:row-span-2" title="Contact">
       <div class="flex h-full w-full items-center justify-center text-center text-sm">

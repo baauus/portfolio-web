@@ -2,9 +2,9 @@ export const PROFILE = {
   site: {
     SEO: {
       //     more complicated description for SEO
-      title: "Tech Tim (@TechTim42) - Learn, Share and Grow ❤️",
+      title: "Ricard Bausili - DevOps Engineer",
       description:
-        "asdasd, Share and Grow ❤️ -- Software Engineer | AWS Professional | Open Source Lover  --☘️ Be more productive, Better in communicating, Contribute more to community. | Tech Tim's New Astro Portfolio",
+        "DevOps & Cloud Engineer portfolio showcasing expertise in cloud infrastructure (AWS, Azure, GCP), automation, CI/CD pipelines, and system administration. Building scalable, secure, and optimized environments for businesses.",
     },
   },
   timezone: "Europe/Andorra",
@@ -17,12 +17,12 @@ export const PROFILE = {
   repo: "https://github.com/baauus",
   avatarUrl: "/profile.png", // replace with your avatar URL
   shortIntros: [
-    "💻 Software/AI Engineer | Open Source Lover | Self-starter",
-    "☁️ AWS Professional | AWS Community Builder",
-    "☘️ Passionate about Dev Experience(DX) Improvement and bringing ideas to life",
-    "📈 Unprofessional Investor",
-    "🌱 Sports lover",
-    "📚 Book  | 🥏 Frisbee Ultimate Player | 🎲 Board Game Player",
+    "[Insert Text 3]",
+    "[Insert Text 4]",
+    "[Insert Text 5]",
+    "[Insert Text 6]",
+    "[Insert Text 7]",
+    "[Insert Text 8]",
   ],
   words: ["As each one has received a gift, minister it to one another"],
   skills: [
@@ -35,7 +35,7 @@ export const PROFILE = {
     "MVware",
     "Windows",
     "Postgres",
-    "SQL",
+    "Hyper-V",
     "Azure",
     "Kubernetes",
   ],
@@ -45,10 +45,6 @@ export const PROFILE = {
   },
   certificates: [
     // studies, qualifications and certifications
-    {
-      title: "Bachelor of Science in Computer Science",
-      level: "Degree",
-    },
     {
       title: "AWS Cloud Practitioner",
       institution: "AWS",
