@@ -4,10 +4,10 @@ import IntroCard from '../components/sections/IntroCard.astro'
 import AboutMe from '../components/sections/AboutMe.astro'
 import Card from '../components/Card.astro'
 import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
-import Books from '../components/sections/Books.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import Projects from '../components/sections/Projects.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
+import EducationCard from '../components/sections/EducationCard.astro'
 import { PROFILE } from "../content/profileData";
 import BlogCard from '../components/sections/BlogCard.astro'
 const SITE = PROFILE.site
@@ -31,47 +31,29 @@ const SITE = PROFILE.site
     <Card colSpan="lg:col-span-9 md:col-span-2" rowSpan="md:row-span-1 lg:row-span-4">
       <IntroCard/>
     </Card>
-    <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-3 lg:row-span-6" title="About me">
-      <AboutMe/>
-    </Card>
-
-    <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-3 lg:row-span-4" title="Projects">
-      <Projects/>
-    </Card>
-
     <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-2" title="Your time">
       <TimeZoneCard/>
     </Card>
     <Card colSpan="lg:col-span-3 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-2" title="My time">
       <TimeZoneCard timezone={PROFILE.timezone} />
     </Card>
-
-
-    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-2">
-      <div class="flex h-full flex-col justify-between">
-        <blockquote class="mt-6 border-l-2 pl-6 italic">
-          “{PROFILE.words[0]}”
-        </blockquote>
-        <p class="mt-2 text-xs"></p>
-      </div>
-    </Card>
-    <Card colSpan="md:col-span-1 lg:col-span-5" rowSpan="md:row-span-2 lg:row-span-2"
-          title="Education and Certificates">
-      <StudyCard/>
-    </Card>
-
-    <Card colSpan="md:col-span-1 lg:col-span-3" rowSpan="md:row-span-2 lg:row-span-2" title="Experiences">
+    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Experiences">
       <ExperienceCard/>
     </Card>
-
-
-    <Card colSpan="md:col-span-1 lg:col-span-6" rowSpan="md:row-span-1 lg:row-span-1" title="Blog Posts">
-      <BlogCard/>
+    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Education">
+      <EducationCard/>
     </Card>
-    <Card colSpan="md:col-span-1 lg:col-span-3" rowSpan="md:row-span-2 lg:row-span-2" title="Books I read">
-      <Books/>
+    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-1 lg:row-span-1" title="Technologies">
+      <AboutMe/>
     </Card>
-    <Card colSpan="md:col-span-1 lg:col-span-6" rowSpan="md:row-span-2 lg:row-span-1" title="Contact">
+    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-1 lg:row-span-1"
+          title="Certificates">
+      <StudyCard/>
+    </Card>
+    <Card colSpan="lg:col-span-4 md:col-span-1" rowSpan="md:row-span-3 lg:row-span-2" title="Projects">
+      <Projects/>
+    </Card>
+    <Card colSpan="md:col-span-1 lg:col-span-4" rowSpan="md:row-span-2 lg:row-span-2" title="Contact">
       <div class="flex h-full w-full items-center justify-center text-center text-sm">
         <i>
           Please feel free to reach out to me through <a href={PROFILE.links.twitter} class="underline hover:font-bold">Twitter

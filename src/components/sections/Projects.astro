@@ -9,7 +9,7 @@ let projects = await getCollection('projects');
 
 // sort projects by dateStart DESC
 projects.sort((a: any, b: any) => {
-  return new Date(b.data.startDate) - new Date(a.data.startDate);
+  return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
 });
 
 projects = projects.slice(0, 3);

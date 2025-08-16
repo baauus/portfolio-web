@@ -8,7 +8,7 @@ import { formateLocalDate } from "../../lib/utils";
 let posts = await getCollection('posts');
 
 posts = posts.sort((a, b) => {
-  return new Date(b.data.startDate) - new Date(a.data.startDate);
+  return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
 });
 posts = posts.slice(0, 2);
 ---

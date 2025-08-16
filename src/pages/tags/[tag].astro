@@ -1,5 +1,5 @@
 ---
-import ProjectCard from 'src/components/ProjectCard.astro'
+import ProjectCard from '../../components/ProjectCard.astro'
 import IndexPageLayout from "../../layouts/IndexPageLayout.astro";
 import { getAndGroupUniqueTags } from "../../lib/utils";
 
@@ -8,15 +8,19 @@ import { getAndGroupUniqueTags } from "../../lib/utils";
  * This is to fetch all unique tags and related content (project experience etc) for each tag
  * And then render the content for each tag
  **/
-export async function getStaticPaths() {
+/**
+ * This is to fetch all unique tags and related content (project experience etc) for each tag
+ * And then render the content for each tag
+ **/
+export async function getStaticPaths(): Promise<{ params: { tag: string }, props: { items: any[] } }[]> {
   const tagItemsMap = await getAndGroupUniqueTags();
   console.log('tagItemsMap', tagItemsMap);
 
-  const result = []
+  const result: { params: { tag: string }, props: { items: any[] } }[] = [];
   tagItemsMap.forEach(
     (items, tag) => {
       result.push({
-        params: {tag}, props: {items},
+        params: { tag }, props: { items },
       });
     }
   );

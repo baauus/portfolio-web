@@ -8,11 +8,9 @@ const tagsMap = await getAndGroupUniqueTags();
 
 const tags = tagsMap.keys();
 
-const tagsWithFrequency = []
+const tagsWithFrequency: { value: string; count: number }[] = []
 
-tagsMap.forEach((value, key) => {
-  tagsWithFrequency.push({value: key, count: value.length});
-});
+tagsMap.forEach((value, key) => tagsWithFrequency.push({ value: key, count: value.length }));
 
 // sort tags by frequency
 tagsWithFrequency.sort((a, b) => b.count - a.count);
