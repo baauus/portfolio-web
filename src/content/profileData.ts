@@ -13,11 +13,11 @@ export const PROFILE = {
   name: "Ricard Bausili",
   headLine: "DevOps",
   headLine2: "I enjoy providing software",
-  website: "https://rbausili.com",
+  website: "https://rbaus.dev",
   repo: "https://github.com/baauus",
   avatarUrl: "/profile.png", // replace with your avatar URL
   shortIntros: [
-    "[Insert Text 3]",
+    "Texto de Test",
     "[Insert Text 4]",
     "[Insert Text 5]",
     "[Insert Text 6]",

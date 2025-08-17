@@ -1,5 +1,5 @@
 {
-  "site": "https://rbausili.com",
+  "site": "https://rbaus.dev",
   "id": "baauus",
   "name": "baauus",
   "version": "1.0.1",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/baauus/portfolio-web"
   },
-  "homepage": "https://rbausili.com",
+  "homepage": "https://rbaus.dev",
   "keywords": [
     "astro",
     "portfolio",
