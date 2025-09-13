@@ -17,10 +17,10 @@ export const PROFILE = {
   repo: "https://github.com/baauus",
   avatarUrl: "/profile.png", // replace with your avatar URL
   shortIntros: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum consectetur dignissim. Quisque porta ultricies commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum consectetur dignissim.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum consectetur dignissim.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum consectetur dignissim.",
+    "System Administrator with experience in cloud computing, server administration, networking, and Microsoft 365. Daily work in Linux environments with a focus on AWS, Azure, and IaC.",
+    "Currently studying Computer Engineering and preparing for cloud certifications, aiming to grow into a DevOps / Cloud Engineering role.",
+    "Passionate about automation, scalability, and CI/CD pipelines, always looking to improve efficiency and reliability.",
+    "Motivated by continuous learning and committed to building cloud-native systems that adapt and scale.",
   ],
   words: ["As each one has received a gift, minister it to one another"],
   skills: [

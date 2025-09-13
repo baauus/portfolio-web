@@ -3,16 +3,17 @@ import {Button} from '../ui/button'
 import {PROFILE} from "../../content/profileData";
 ---
 
-<div class="flex h-full w-full animate-appear">
-  <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
+<div class="relative flex h-full w-full animate-appear flex-col md:flex-row">
+
+  <div class="flex flex-1 flex-col justify-between gap-4 md:max-h-[300px]">
     <div class="flex h-full flex-col">
-      <!--<h6 class="m-0 text-sm font-light text-gray-500">-->
-      <!--  @TechTim42-->
-      <!--</h6>-->
+      <!-- <h6 class="m-0 text-sm font-light text-gray-500">
+      @TechTim42
+      </h6> -->
       <p class="m-0 text-xl font-light">
-        <b>System Administrator | Cloud Engineer | DevOps</b>
+        <b>System Administrator | DevOps</b>
       </p>
-      <p class="m-0 text-xl font-light">
+      <p class="m-0 text-l font-light">
         Andorra
       </p>
       <ul class="pt-4">
@@ -33,9 +34,8 @@ import {PROFILE} from "../../content/profileData";
   </div>
   <img
     src={PROFILE.avatarUrl}
-    class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[256px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
-    width="100%"
-    height="auto"
+    class="pointer-events-none relative mx-auto mt-3 max-h-[128px] max-w-[128px] w-auto select-none 
+    md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100 md:max-h-[200px] md:max-w-[200px]"
     alt={`image of ${PROFILE.name}`}
   />
 </div>

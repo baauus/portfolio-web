@@ -55,6 +55,23 @@ To install and run the project locally, follow these steps:
    1. Edit `src/content/profileData.ts` to add your profile data
    2. Edit `astro.config.mjs` to change the site information
 
+## Save on GitHub
+
+1. Añadir todos los archivos
+   ```bash
+   git add .
+   ```
+
+2. Hacer el commit
+   ```bash
+   git commit -m "comentario"
+   ```
+
+3. Subir
+   ```bash
+   git push
+   ```
+
 ## Deployment en AWS
 
 1. Crear el /dist
