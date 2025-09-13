@@ -55,6 +55,26 @@ To install and run the project locally, follow these steps:
    1. Edit `src/content/profileData.ts` to add your profile data
    2. Edit `astro.config.mjs` to change the site information
 
+## Deployment en AWS
+
+1. Crear el /dist
+   El /dist es una carpeta la cual crea pnpm para subir la web
+
+   ```bash
+   pnpm build
+   ```
+
+2. Subir a AWS S3
+
+   ```bash
+   aws s3 sync ./dist s3://portfolio-web-rbaus --delete
+   ```
+
+3. Sincronizar la "invalidation" en AWS CloudFront
+
+   ```bash
+   aws cloudfront create-invalidation --distribution-id E39O35XW3UA19E --paths "/*"
+   ```
 
 ## Important Considerations
 

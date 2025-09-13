@@ -1,74 +1,38 @@
 ---
-import {buttonVariants} from '../components/ui/button'
-import {ModeToggle} from '../components/react/ThemeToggle'
-import {PROFILE} from "../content/profileData";
-
-const SITE = PROFILE.site
+import { buttonVariants } from '../components/ui/button'
+import { ModeToggle } from '../components/react/ThemeToggle' // named export
+import MobileMenu from '../components/react/MobileMenu'
+import { PROFILE } from '../content/profileData'
 ---
 
 <header
   class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
-  <div
-    class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
-  >
-    <div class="flex gap-6 md:gap-10">
-      <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold">{PROFILE.name}</span>
-      </a>
-    </div>
-    <div class="flex flex-1 items-center justify-end space-x-4">
-      <nav class="flex items-center space-x-1">
-        <a
-          href="/"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          /index
-        </a>
-        <a
-          href="/experiences"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          Experience
-        </a>
-        <a
-          href="/education"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          Education
-        </a>
-        <a
-          href="/projects"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          Projects
-        </a>
-        <a
-          href={PROFILE.repo}
-          target="_blank"
-          rel="noreferrer"
-          class={buttonVariants({variant: 'ghost'})}
-        >
-          GitHub
-        </a>
+  <div class="mx-auto flex h-12 max-w-4xl items-center justify-between px-4">
+    <a href="/" class="flex items-center">
+      <span class="inline-block font-bold">{PROFILE.name}</span>
+    </a>
 
-        <ModeToggle transition:persist client:load/>
-      </nav>
+    <!-- Botón hamburguesa en móvil -->
+    <div class="md:hidden">
+      <MobileMenu repoUrl={PROFILE.repo} client:load />
     </div>
+
+    <!-- Menú de escritorio -->
+    <nav class="hidden md:flex items-center space-x-2 text-sm">
+      <a href="/" class={buttonVariants({ variant: 'ghost' })}>/index</a>
+      <a href="/experiences" class={buttonVariants({ variant: 'ghost' })}>Experience</a>
+      <a href="/education" class={buttonVariants({ variant: 'ghost' })}>Education</a>
+      <a href="/projects" class={buttonVariants({ variant: 'ghost' })}>Projects</a>
+      <a href={PROFILE.repo} target="_blank" rel="noreferrer" class={buttonVariants({ variant: 'ghost' })}>GitHub</a>
+      <ModeToggle client:load />
+    </nav>
   </div>
 </header>
 
-
+<!-- Set inicial del tema para evitar flash en el primer render -->
 <script is:inline>
-  document.addEventListener('astro:after-swap', function () {
-    if (localStorage.getItem('theme') === 'dark')
-      document.documentElement.classList.toggle('dark', true)
-  })
-
-  const getThemePreference = () => {
-    return localStorage.getItem('theme')
-  }
-
-  const isDark = getThemePreference() === 'dark'
-  document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  const saved = localStorage.getItem('theme')
+  const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches
+  document.documentElement.classList.toggle('dark', saved ? saved === 'dark' : prefers)
 </script>
