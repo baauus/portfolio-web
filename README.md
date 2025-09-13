@@ -50,8 +50,19 @@ To install and run the project locally, follow these steps:
    pnpm run dev
    ```
 
-5. Open your browser and visit `http://localhost:4312` to see your portfolio in action.
-6. Config your site
+5. Create .env File
+
+6. Charge the .env variables
+   
+   ```bash
+   set -a
+   source .env
+   set +a
+   ```
+
+7. Open your browser and visit `http://localhost:4312` to see your portfolio in action.
+
+8. Config your site
    1. Edit `src/content/profileData.ts` to add your profile data
    2. Edit `astro.config.mjs` to change the site information
 
