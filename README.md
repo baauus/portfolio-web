@@ -84,13 +84,13 @@ To install and run the project locally, follow these steps:
 2. Subir a AWS S3
 
    ```bash
-   aws s3 sync ./dist s3://portfolio-web-rbaus --delete
+   aws s3 sync ./dist s3://$AWS_BUCKET --delete
    ```
 
 3. Sincronizar la "invalidation" en AWS CloudFront
 
    ```bash
-   aws cloudfront create-invalidation --distribution-id E39O35XW3UA19E --paths "/*"
+   aws cloudfront create-invalidation --distribution-id $AWS_DISTRIBUTION_ID --paths "/*"
    ```
 
 ## Important Considerations
