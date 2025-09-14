@@ -2,19 +2,7 @@
 import { Card as ShadcnCard } from './ui/card'
 import { Badge } from './ui/badge'
 
-
-const {
-  as: Tag = 'a',
-  class: className,
-  href,
-  heading,
-  subheading,
-  imagePath,
-  altText,
-  dateStart,
-} = Astro.props
-
-
+const { as: Tag = 'a', class: className, href, heading, subheading, imagePath, altText, dateStart } = Astro.props
 ---
 
 <Tag href={href} class={`${className}`}>
