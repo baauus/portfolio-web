@@ -1,9 +1,12 @@
 ---
 import { Breadcrumbs } from 'astro-breadcrumbs'
 import 'astro-breadcrumbs/breadcrumbs.css'
+
+const { title } = Astro.props
+const customizeLinks = title ? [{ index: "last", text: title }] : []
 ---
 
-<Breadcrumbs separatorAriaHidden={false} ariaLabel="breadcrumbs" linkTextFormat="capitalized">
+<Breadcrumbs separatorAriaHidden={false} ariaLabel="breadcrumbs" linkTextFormat="capitalized" customizeLinks={customizeLinks}>
   <svg
     slot="separator"
     xmlns="http://www.w3.org/2000/svg"
