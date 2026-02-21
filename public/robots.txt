@@ -43,5 +43,3 @@ Disallow: /projects/
 Disallow: /experiences/
 Disallow: /education/
 Disallow: /tags/
-
-Sitemap: https://rbaus.dev/sitemap-index.xml
