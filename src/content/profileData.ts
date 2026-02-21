@@ -15,7 +15,7 @@ export const PROFILE = {
   headLine2: "I enjoy providing software",
   website: "https://rbaus.dev",
   repo: "https://github.com/baauus",
-  avatarUrl: "/profile.png", // replace with your avatar URL
+  avatarUrl: "/profile.jpg", // replace with your avatar URL
   shortIntros: [
     "DevOps Engineer specializing in Cloud Computing. I have hands-on experience with server administration, networking, virtualization and cloud. I work daily with Linux environments and I'm currently focused on Google Cloud Platform and AWS, Containers and Infrastructure as code.",
     "Passionate about automation, scalability, and CI/CD pipelines, always looking to improve efficiency and reliability.",

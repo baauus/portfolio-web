@@ -1,41 +1,35 @@
 ---
-import {Button} from '../ui/button'
 import {PROFILE} from "../../content/profileData";
 ---
 
-<div class="relative flex h-full w-full animate-appear flex-col md:flex-row">
+<div class="relative flex h-full w-full animate-appear flex-col md:flex-row md:gap-6">
 
-  <div class="flex flex-1 flex-col justify-between gap-4 md:max-h-[300px]">
-    <div class="flex h-full flex-col">
-      <!-- <h6 class="m-0 text-sm font-light text-gray-500">
-      @TechTim42
-      </h6> -->
-      <p class="m-0 text-xl font-light">
-        <b>DevOps Engineer</b>
-      </p>
-      <p class="m-0 text-l font-light">
-        Andorra
-      </p>
-      <ul class="pt-4">
-        {PROFILE.shortIntros.map((intro, index) => (
-          <>
-            {index === (PROFILE.shortIntros.length / 2)
-              //when it is even number, and in the middle add an empty line
-
-              ? <br/>
-              :
-              <></>
-            }
-            <li>{intro}</li>
-          </>
-        ))}
-      </ul>
+  <div class="flex flex-1 flex-col gap-3">
+    <!-- Header: title + location, with image on mobile -->
+    <div class="flex items-start justify-between md:block">
+      <div>
+        <p class="m-0 text-xl font-semibold">DevOps Engineer</p>
+        <p class="m-0 text-sm text-muted-foreground">Andorra</p>
+      </div>
+      <!-- Image visible only on mobile -->
+      <img
+        src={PROFILE.avatarUrl}
+        class="block md:hidden pointer-events-none select-none rounded-xl object-cover h-16 w-16 shrink-0"
+        alt={`image of ${PROFILE.name}`}
+      />
     </div>
+    <!-- Description -->
+    <ul class="pt-2 list-none space-y-2">
+      {PROFILE.shortIntros.map((intro) => (
+        <li>{intro}</li>
+      ))}
+    </ul>
   </div>
+
+  <!-- Image visible only on desktop -->
   <img
     src={PROFILE.avatarUrl}
-    class="pointer-events-none relative mx-auto mt-3 max-h-[128px] max-w-[128px] w-auto select-none 
-    md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100 md:max-h-[200px] md:max-w-[200px]"
+    class="hidden md:block pointer-events-none select-none rounded-xl object-cover h-32 w-32 shrink-0 self-start"
     alt={`image of ${PROFILE.name}`}
   />
 </div>
