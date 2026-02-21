@@ -3,7 +3,7 @@ import { Breadcrumbs } from 'astro-breadcrumbs'
 import 'astro-breadcrumbs/breadcrumbs.css'
 
 const { title } = Astro.props
-const customizeLinks = title ? [{ index: "last", text: title }] : []
+const customizeLinks = title ? [{ index: "last" as const, text: title }] : []
 ---
 
 <Breadcrumbs separatorAriaHidden={false} ariaLabel="breadcrumbs" linkTextFormat="capitalized" customizeLinks={customizeLinks}>
