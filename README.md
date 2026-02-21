@@ -35,14 +35,8 @@ Installation guide for this portfolio web.
    pnpm run dev
    ```
 
-5. Create .env File
+5. Create .env File (If you want)
 
-6. Charge the .env variables
-   
-   ```bash
-   set -a
-   source .env
-   set +a
    ```
 
 7. Open your browser and visit `http://localhost:4312` to see your portfolio in action.
@@ -68,7 +62,9 @@ Installation guide for this portfolio web.
    git push
    ```
 
-## Deployment en AWS
+## Deploy
+
+### Manual deploy
 
 1. Crear el /dist
    El /dist es una carpeta la cual crea pnpm para subir la web
@@ -89,6 +85,9 @@ Installation guide for this portfolio web.
    aws cloudfront create-invalidation --distribution-id $AWS_DISTRIBUTION_ID --paths "/*"
    ```
 
+### Automated deploy
+Doing a push on main it deploys automatically with GitHub Actions.
+
 ## Important Considerations
 
 - **Accessibility**: Ensure your portfolio is accessible to all users, including those with disabilities.
@@ -96,28 +95,9 @@ Installation guide for this portfolio web.
 - **Performance**: Use modern web development practices to ensure optimal performance, such as lazy loading images and minimizing CSS/JS.
 - **Responsive Design**: Make sure your portfolio looks good on devices of all sizes, from mobile to desktop screens.
 
-## Contributions
-
-Contributions are welcome! If you have ideas or improvements, please open an issue or submit a pull request.
 
 ## License
 
 - This source codes are licensed under the [MIT License](LICENSE).
 - The content (`src/content/`) of the portfolio is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 - The images (`public/`) used in the project are for template demonstration purposes only and should not be reused without permission.
-
-## Inspiration
-
-This project was inspired by several outstanding portfolios. Here are some that served as references:
-
-- [Bento Like Portfolio](https://github.com/Ladvace/astro-bento-portfolio)
-- [Minimal and bento Portfolio ](https://github.com/bue221/astro-portfolio)
-
-### Differences / Improvements
-
-- Centralised data management inside one folder
-  - Use Astro recommended [Content Collection](https://docs.astro.build/en/guides/content-collections/) to manage data
-  - `src/content` folder for blog posts, project data and profile data
-  - `src/content/profileData.ts` for general profile data
-- Tags system
-- Simplified Dark/Light mode toggle
