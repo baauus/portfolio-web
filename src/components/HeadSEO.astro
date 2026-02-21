@@ -6,22 +6,24 @@ interface Props {
   description?: string
   ogImage?: URL
   canonicalURL?: URL
+  noindex?: boolean
 }
 
-const {title, description, ogImage, canonicalURL} = Astro.props
+const {title, description, ogImage, canonicalURL, noindex = false} = Astro.props
 const canonical = canonicalURL? canonicalURL: new URL(Astro.url.pathname, Astro.site)
 ---
 
 <meta charset="utf-8"/>
-<meta name="robots" content="index, follow"/>
-<meta name="googlebot" content="index, follow"/>
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"}/>
+<meta name="googlebot" content={noindex ? "noindex, nofollow" : "index, follow"}/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="generator" content={Astro.generator}/>
 <link rel="canonical" href={canonical}/>
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
+<link
+  rel="shortcut icon"
+  type="image/svg+xml"
+  href={`${Astro.site}favicon.ico`}
+/>
 <title>{title}</title>
 <meta name="title" content={title}/>
 <meta name="description" content={description}/>
@@ -44,5 +46,5 @@ const canonical = canonicalURL? canonicalURL: new URL(Astro.url.pathname, Astro.
 <meta property="twitter:title" content={title}/>
 <meta property="twitter:description" content={description}/>
 
-<link rel="preload" href="shttps://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>

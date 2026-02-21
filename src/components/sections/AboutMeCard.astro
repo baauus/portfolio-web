@@ -16,6 +16,9 @@ import {PROFILE} from "../../content/profileData";
         src={PROFILE.avatarUrl}
         class="block md:hidden pointer-events-none select-none rounded-xl object-cover h-16 w-16 shrink-0"
         alt={`image of ${PROFILE.name}`}
+        width="64"
+        height="64"
+        loading="eager"
       />
     </div>
     <!-- Description -->
@@ -31,6 +34,9 @@ import {PROFILE} from "../../content/profileData";
     src={PROFILE.avatarUrl}
     class="hidden md:block pointer-events-none select-none rounded-xl object-cover h-32 w-32 shrink-0 self-start"
     alt={`image of ${PROFILE.name}`}
+    width="128"
+    height="128"
+    loading="eager"
   />
 </div>
 

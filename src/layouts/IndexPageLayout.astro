@@ -11,7 +11,7 @@ if (!subTitle) {
 }
 ---
 
-<BaseLayout title={title} description={description} ogImage={image?.url} canonicalURL={canonicalURL}>
+<BaseLayout title={title} description={description} ogImage={image?.url} canonicalURL={canonicalURL} noindex={true}>
   <main class="flex min-h-[80vh] flex-auto flex-col w-full p-4 max-w-screen-lg" transition:name="hero">
     <TopLayout>
       <div class="border-b pb-2">
