@@ -2,7 +2,7 @@
   "site": "https://rbaus.dev",
   "id": "baauus",
   "name": "baauus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "fullName": "Ricard Bausili",
   "description": "A personal portfolio website built with Astro, showcasing projects, blog posts, and experience using a modern tech stack.",
   "author": {
