@@ -13,12 +13,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     mdx(),
-    sitemap({
-      filter: (page) =>
-        !page.includes("/projects/") &&
-        !page.includes("/experiences/") &&
-        !page.includes("/education/") &&
-        !page.includes("/tags/"),
-    }),
+    sitemap(),
   ],
 });
