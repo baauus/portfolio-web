@@ -1,41 +1,26 @@
-# TechTim's Astro Bento Portfolio
+# Baus portfolio (rbaus.dev)
 
-This template helps you build a portfolio using Astro, Typescript, React, Tailwind CSS, and Shadcn UI.
-
-- [Live Demo](https://techtim42.com)
-- [GitHub Repo](https://github.com/tim-hub/techtim-astro-bento-portfolio)
-
-## Technologies Used
-
-This project utilizes the following technologies:
-
-- **Astro**: A modern framework for building fast and efficient websites.
-- **Tailwind CSS**: A utility-first CSS framework for rapid and responsive design.
-- **Shadcn UI**: A collection of accessible and easy-to-use UI components.
-- **React**: For interactive components and advanced functionality.
-- **TypeScript**: For static type checking and improved developer experience.
+Installation guide for this portfolio web.
 
 ## Requirements
-
-Before starting, make sure you have the following requirements installed:
 
 - Node.js (version 18 or higher)
 - pnpm (version 8 or higher)
 
 ## Installation
 
-To install and run the project locally, follow these steps:
+**Local installation**:
 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/tim-hub/techtim-astro-bento-portfolio
+   git clone git@github.com:baauus/portfolio-web.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd techtim-astro-bento-portfolio
+   cd portfolio-web
    ```
 
 3. Install the dependencies:
